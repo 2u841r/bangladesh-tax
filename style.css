@@ -23,6 +23,7 @@ td {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     padding: 1rem;
 
 }
@@ -45,7 +46,7 @@ td {
     width: 50%;
     display: flex;
     justify-content: center;
-    align-items:center;
+    align-items:start;
     background-color: maroon;
     border-radius: 0.1rem;
     padding: 1rem;
