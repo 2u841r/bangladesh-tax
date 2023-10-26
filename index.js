@@ -34,7 +34,7 @@ const check1 = (event) => {
 
 const check2 = (step1Taka, step1Tax) => {
     if (aay > step1Taka && aay <= step2Taka) {
-        createTd(step1Taka, step1Tax, aay, step1Tax)
+        createTd(step1Taka, step1Tax, step1Taka, step1Tax)
         korjoggoAay2 = (aay - step1Taka);
         step2TaxinTaka = korjoggoAay2 / 100 * 5
         createTd(step2Taka, step2Tax, korjoggoAay2, step2TaxinTaka)
