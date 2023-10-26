@@ -1,0 +1,91 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+table,
+th,
+td {
+    text-align: center;
+    margin-top: 10px;
+    border: 1px solid black;
+    width: 500px;
+}
+
+.gopon {
+    display: none;
+}
+
+.container {
+    background-color: #333;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+
+}
+
+.card {
+    height: 80vh;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    background-color: darkblue;
+    border-radius: 0.1rem;
+    padding: 1rem;
+
+}
+
+
+.card2 {
+    height: 80vh;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background-color: maroon;
+    border-radius: 0.1rem;
+    padding: 1rem;
+
+}
+
+.card-head{
+    color: wheat;
+    text-align: center;
+    font-size:1.2rem;
+}
+
+.btn {
+    border: none;
+    border-radius: 0.6rem;
+    padding: 0.5rem;
+    background-color: lightgrey;
+    color: black;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+input{
+    border: none;
+}
+
+#resulT {
+    text-align: center;
+}
+
+#taxf{
+    text-align: center;
+}
+
+.card-body{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+}
