@@ -98,9 +98,33 @@ input{
 @media screen and (max-width: 500px){
     .card{
         width: 90%;
+        background-color:darksalmon;
+
     } 
     .card2{
         width: 90%;
+        background-color:olivedrab;
+
+    }
+    .card-head{
+        color: black;
+        text-align: center;
+        font-size:1.2rem;
+    }
+
+    input{
+        border: none;
+        margin-bottom: 10px;
+    }
+
+    .btn {
+        border: none;
+        border-radius: 0.4rem;
+        padding: 0.3rem;
+        background-color: lightgrey;
+        color: black;
+        transition: all 0.3s;
+        cursor: pointer;
     }
 
 }
