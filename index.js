@@ -27,7 +27,7 @@ const check1 = (event) => {
     }
 
     check2(step1Taka, step1Tax)
-
+ document.querySelector('#aay').value = ''
 
 }
 
