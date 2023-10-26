@@ -6,39 +6,136 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tax bd</title>
     <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
         table,
         th,
         td {
+            text-align: center;
             margin-top: 10px;
             border: 1px solid black;
+            width: 500px;
         }
 
-        .gopon{
+        .gopon {
             display: none;
+        }
+
+        .container {
+            background-color: #333;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+
+        }
+
+        .card {
+            height: 80vh;
+            width: 50%;
+            display: flex;
+            justify-content: space-around;
+            align-items:center;
+            background-color: darkblue;
+            border-radius: 0.1rem;
+            padding: 1rem;
+
+        }
+
+        
+        .card2 {
+            height: 80vh;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            background-color: maroon;
+            border-radius: 0.1rem;
+            padding: 1rem;
+
+        }
+
+        .card-head{
+            color: wheat;
+            text-align: center;
+            font-size:1.2rem;
+        }
+
+        .btn {
+            border: none;
+            border-radius: 0.6rem;
+            padding: 0.5rem;
+            background-color: lightgrey;
+            color: black;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        input{
+            border: none;
+        }
+
+        #resulT {
+            text-align: center;
+        }
+
+        #taxf{
+            text-align: center;
+        }
+
+        .card-body{
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            flex-direction: column;
+            text-align: center;
+            color: white;
+            font-size: 1.2rem;
         }
     </style>
 </head>
 
 <body id="body">
 
-    <form action="" id="taxf" name="taxf">
-        <input type="number" name="" id="aay" placeholder="aay" required>
-        <input type="submit" name="" id="">
-        <input type="reset" onclick="location.reload()">
-    </form>
+    <div class="container">
+        <div class="card">
 
-    <table id="resulT" style="width:50%; border: 1px;">
-        <tr>
-            <th>ট্যাক্সের রেঞ্জ </th>
-            <th>ট্যাক্সের পার্সেন্ট </th>
-            <th> রেঞ্জের আওতায় </th>
-            <th> আপনার ট্যাক্স </th>
+            <div class="card-head">
+                <h3 class="card-title">Bangladeshi TAX calculator</h3>
+                <p> This is applicable for men. I will try to add womens later.</p>
+                <p> also, will try to add tax rebates etc. </p>
 
-        </tr>
-    </table>
+            </div>
+        </div>
 
-    <button onclick="total()" id="goponbtn" class='gopon'>Total tax</button>
-    <p class="totaldekhano"></p>
+        <div class="card2">
+            
+            <div class="card-body">
+                <form action="" id="taxf" name="taxf">
+                    <label for="aay"></label>
+                    <input type="number" class="btn" name="" id="aay" placeholder="আপনার বার্ষিক আয়" required>
+                    <input type="submit" class="btn" name="" id="submitbtn">
+                    <input type="reset" class="btn" onclick="location.reload()">
+                </form>
+                <table id="resulT" style="width:60%; border: 1px;">
+                    <tr>
+                        <th>ট্যাক্সের রেঞ্জ</th>
+                        <th>ট্যাক্সের পার্সেন্ট</th>
+                        <th>আওতাভূক্ত</th>
+                        <th> ট্যাক্সের পরিমাণ </th>
+                    </tr>
+                </table>
+                <button onclick="total()" id="goponbtn" class='gopon btn'>Total tax</button>
+                <p class="totaldekhano"></p>
+            </div>
+
+        </div>
+    </div>
 
     <script>
 
@@ -62,6 +159,7 @@
 
         const check1 = (event) => {
             event.preventDefault();
+            document.querySelector('#submitbtn').classList.add('gopon')
             document.querySelector('#goponbtn').classList.remove('gopon')
             aayfield = document.querySelector('#aay');
             aay = Number(document.querySelector('#aay').value);
@@ -170,15 +268,15 @@
 
         function total() {
             let totaltax = document.querySelectorAll('.totaltax');
-            let sum = 0; 
+            let sum = 0;
             for (let tax of totaltax) {
                 let taxValue = parseFloat(tax.textContent)
-                if(!isNaN(taxValue)) {
-                    sum += taxValue; 
+                if (!isNaN(taxValue)) {
+                    sum += taxValue;
                 }
             }
 
-            createTd('Total','','',sum)
+            createTd('Total', '', '', sum)
         }
 
 
