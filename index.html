@@ -5,7 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tax bd</title>
+    <style>
+        .defaultColor{
+            background-color: rgb(80, 200, 120);
+        }
+        .male {
+            background-color: royalblue;
+        }
+
+        .female {
+            background-color: palevioletred;
+        }
+    </style>
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body id="body">
@@ -15,19 +28,29 @@
 
             <div class="card-head">
                 <h3 class="card-title">Bangladeshi TAX calculator</h3>
-                <p> This is applicable for men. I will try to add womens later.</p>
+                <p> This is applicable for men. I will try to add womens later. (womens tax added: 31-Oct-2023) </p>
                 <p> also, will try to add tax rebates etc. </p>
 
             </div>
         </div>
 
-        <div class="card2">
-            
+        <div class="card2 defaultColor" id="div2">
+
             <div class="card-body">
                 <form action="" id="taxf" name="taxf">
                     <label for="aay"></label>
-                    <input type="number" class="btn" name="" id="aay" placeholder=" আপনার বার্ষিক আয়" required>
-                    <input type="submit" class="btn" name="" id="submitbtn">
+                    <input type="number" class="btn" id="aay" placeholder=" আপনার বার্ষিক আয়" required>
+
+                    <br>
+
+                    <label for="male"> <input type="radio" name="gender" id="male" value="M" class="index" required>
+                        Male </label>
+
+                    <label for="female"> <input type="radio" name="gender" id="female" value="F" class="indexf"> Female
+                    </label>
+
+
+                    <input type="submit" class="btn" id="submitbtn">
                     <input type="reset" class="btn gopon" id="resetbtn" onclick="location.reload()">
                 </form>
                 <table id="resulT">
@@ -44,8 +67,39 @@
 
         </div>
     </div>
+    <script id="js"></script>
 
-    <script src="index.js"></script>
+    <script>
+        const jsfile = document.querySelector('script');
+
+        const radios = document.querySelectorAll('input[type="radio"]')
+
+        radios.forEach(radio => {
+            radio.addEventListener('change', () => {
+                if (radio.checked) {
+                    jsfile.src = ''
+                    jsfile.src = radio.className + '.js';
+                    
+                    console.log(jsfile.src); // for chech, haha
+                    let targetCss = document.querySelector('#div2')
+
+                    if (!targetCss.classList.contains('male') &&radio.id == 'male' ) {
+                        targetCss.classList.add('male');
+                        targetCss.classList.remove('female');
+
+                    }
+                    if (!targetCss.classList.contains('female') &&radio.id == 'female'){
+                        targetCss.classList.add('female');
+                        targetCss.classList.remove('male');
+                    }
+                }
+            });
+        });
+
+
+    </script>
+
+
 </body>
 
 </html>

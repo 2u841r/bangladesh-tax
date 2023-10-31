@@ -1,14 +1,17 @@
 // tax v3
 // Bangladeshs' tax rule as per 2023-24 financial year. if there are any change you just change these value, and TADA, this converter will be still valid after that.
-step1Taka = 350000;
+
+console.log('f activated');
+
+step1Taka = 400000;
 step1Tax = 0;
-step2Taka = 450000;
+step2Taka = 500000;
 step2Tax = 5;
-step3Taka = 750000;
+step3Taka = 800000;
 step3Tax = 10;
-step4Taka = 1150000;
+step4Taka = 1200000;
 step4Tax = 15;
-step5Taka = 1650000;
+step5Taka = 1700000;
 step5Tax = 20;
 step6Taka = "rest";
 step6Tax = 25;
@@ -34,7 +37,7 @@ const check1 = (event) => {
   aay = Number(document.querySelector("#aay").value);
   if (aay <= step1Taka) {
     createTd(step1Taka, step1Tax, aay, step1Tax);
-    console.log("c1 done");
+    console.log("c1 F done");
   }
   check2();
   // document.querySelector("#aay").value = ""; // no need, bacause input field hidden after submit
@@ -48,7 +51,7 @@ const check2 = () => {
       : (korjoggoAay2 = step2Taka - step1Taka);
     step2TaxinTaka = (korjoggoAay2 / 100) * step2Tax;
     createTd(step2Taka, step2Tax, korjoggoAay2, step2TaxinTaka);
-    console.log("c2 done");
+    console.log("c2 F done");
   }
   check3();
 };
@@ -60,7 +63,7 @@ const check3 = () => {
       : (korjoggoAay3 = step3Taka - step2Taka);
     step3TaxinTaka = (korjoggoAay3 / 100) * step3Tax;
     createTd(step3Taka, step3Tax, korjoggoAay3, step3TaxinTaka);
-    console.log("c3 done");
+    console.log("c3 F done");
   }
   check4();
 };
@@ -72,7 +75,7 @@ const check4 = () => {
       : (korjoggoAay4 = step4Taka - step3Taka);
     step4TaxinTaka = (korjoggoAay4 / 100) * step4Tax;
     createTd(step4Taka, step4Tax, korjoggoAay4, step4TaxinTaka);
-    console.log("c4 done");
+    console.log("c4 F done");
   }
 
   check5();
@@ -85,7 +88,7 @@ const check5 = () => {
       : (korjoggoAay5 = step5Taka - step4Taka);
     step5TaxinTaka = (korjoggoAay5 / 100) * step5Tax;
     createTd(step5Taka, step5Tax, korjoggoAay5, step5TaxinTaka);
-    console.log("c5 done");
+    console.log("c5 F done");
   }
 
   check6();
@@ -96,7 +99,7 @@ const check6 = () => {
     korjoggoAay6 = aay - step5Taka;
     step6TaxinTaka = (korjoggoAay6 / 100) * step6Tax;
     createTd(step6Taka, step6Tax, korjoggoAay6, step6TaxinTaka);
-    console.log("c6 / final check done");
+    console.log("c6  F / final check done");
   }
 };
 
@@ -140,4 +143,3 @@ function total() {
 }
 
 document.querySelector("#taxf").addEventListener("submit", check1);
-

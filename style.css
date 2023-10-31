@@ -49,7 +49,6 @@ p{
     display: flex;
     justify-content: center;
     align-items: start;
-    background-color: maroon;
     border-radius: 0px 0px 20px 20px ;
     padding: 1rem;
 
@@ -94,6 +93,15 @@ p{
     font-size: 1rem;
 }
 
+
+.card2m{
+    background-color: royalblue;
+}
+.card2f{
+    background-color: palevioletred;
+}
+
+
 @media screen and (max-width: 700px) {
     .card {
         height: 32vh;
@@ -112,7 +120,6 @@ p{
         display: flex;
         justify-content: center;
         align-items: start;
-        background-color: rgb(180, 117, 0);
         border-radius: 0px 0px 20px 20px ;
         padding: 1rem;
     
@@ -124,7 +131,7 @@ p{
     }
 
     #resulT {
-        width: 290px;
+        width: 70%;
     }
 
     #aay::placeholder {
@@ -133,3 +140,6 @@ p{
     }
     
 }
+
+
+
