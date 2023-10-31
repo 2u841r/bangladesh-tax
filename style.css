@@ -10,7 +10,7 @@ table{
 }
 
 th,td{
-    padding: 10px;
+    padding: 0.7rem;
     border: 0.5px solid ;
 }
 
@@ -61,9 +61,11 @@ p{
 }
 
 .btn {
+    margin-top: 5px;
+    margin-left: 5px;
     border: none;
-    border-radius: 0.6rem;
-    padding: 0.3rem;
+    border-radius: 0.3rem;
+    padding: 0.2rem;
     transition: all 0.3s;
     cursor: pointer;
 }
@@ -79,8 +81,8 @@ p{
     color: black; 
 }
 
-#resulT {
-    width: 340px;
+table{
+
 }
 
 .card-body {
@@ -105,7 +107,7 @@ p{
 @media screen and (max-width: 700px) {
     .card {
         height: 32vh;
-        width: 90%;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -116,7 +118,7 @@ p{
     
     .card2 {
         height: 68vh;
-        width: 90%;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: start;
@@ -130,8 +132,14 @@ p{
         font-size: 14px;
     }
 
-    #resulT {
-        width: 70%;
+    table{
+        text-align: center;
+        margin-top: 10px;
+    }
+    
+    th,td{
+        padding: 0.4rem;
+        border: 0.5px solid ;
     }
 
     #aay::placeholder {
