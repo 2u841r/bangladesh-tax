@@ -139,5 +139,6 @@ function total() {
   cssChange("#goponbtn", "add", "gopon");
 }
 
+
 document.querySelector("#taxf").addEventListener("submit", check1);
 
