@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tax bd</title>
-        <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+
     <style>
         .defaultColor{
             background-color: rgb(80, 200, 120);
@@ -66,13 +67,13 @@
                 <button onclick="total()" id="goponbtn" class='gopon btn'>Total tax</button>
                 <p class="totaldekhano"></p>
 
-                <p style="margin-top: 40vh;"> <a style="text-decoration: none;" href="https://github.com/2u841r/bdtax" target="_blank"> © Zubair <i class="fa-brands fa-github" style="color: #000000;"></i> </a> </p>
+                <p style="margin-top: 80vh; position: absolute;"> <a style="text-decoration: none;" href="https://github.com/2u841r/bdtax" target="_blank"> © Zubair <i class="fa-brands fa-github" style="color: #000000;"></i> </a> </p>
                
             </div>
  
         </div>
     </div>
-    <script id="js"></script>
+    <script src="index.js" id="js"></script>
 
     <script>
         const jsfile = document.querySelector('script');
@@ -88,12 +89,12 @@
                     console.log(jsfile.src); // for chech, haha
                     let targetCss = document.querySelector('#div2')
 
-                    if (!targetCss.classList.contains('male') &&radio.id == 'male' ) {
+                    if (!targetCss.classList.contains('male') && radio.id == 'male' ) {
                         targetCss.classList.add('male');
                         targetCss.classList.remove('female');
 
                     }
-                    if (!targetCss.classList.contains('female') &&radio.id == 'female'){
+                    if (!targetCss.classList.contains('female') && radio.id == 'female'){
                         targetCss.classList.add('female');
                         targetCss.classList.remove('male');
                     }
