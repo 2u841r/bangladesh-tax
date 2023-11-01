@@ -103,6 +103,7 @@ table{
     background-color: palevioletred;
 }
 
+// for mobile and tab
 
 @media screen and (max-width: 700px) {
     .card {
